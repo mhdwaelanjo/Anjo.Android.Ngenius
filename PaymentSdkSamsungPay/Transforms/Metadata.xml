@@ -1,9 +1,33 @@
 ﻿<metadata>
-  <!--
+	<!--
   This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
   
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+
+	<remove-node path="/api/package[@name='com.samsung.android.sdk.samsungpay.v2']/class[@name='ServiceHelper']/field[@name='bindRetry']" />
+
+	<attr name="argsType" path="/api/package[@name='com.samsung.android.sdk.samsungpay.v2.card']/interface[@name='GetCardListener']/method[@name='onFail' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle']]">onFail_GetCardListener_EventArgs</attr>
+	<attr name="argsType" path="/api/package[@name='com.samsung.android.sdk.samsungpay.v2.card']/interface[@name='GetCardListener']/method[@name='onSuccess' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;com.samsung.android.sdk.samsungpay.v2.card.Card&gt;']]">OnSuccess_GetCardListener_EventArgs</attr>
+
+	<attr name="argsType" path="/api/package[@name='com.samsung.android.sdk.samsungpay.v2.card']/interface[@name='CardListener']/method[@name='onFail' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle']]">onFail_CardListener_EventArgs</attr>
+	<attr name="argsType" path="/api/package[@name='com.samsung.android.sdk.samsungpay.v2.card']/interface[@name='CardListener']/method[@name='onSuccess' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle']]">OnSuccess_CardListener_EventArgs</attr>
+
+	<attr name="argsType" path="/api/package[@name='com.samsung.android.sdk.samsungpay.v2.payment']/interface[@name='TransactionResultListener']/method[@name='onFail' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle']]">onFail_TransactionResultListener_EventArgs</attr>
+	<attr name="argsType" path="/api/package[@name='com.samsung.android.sdk.samsungpay.v2.payment']/interface[@name='TransactionResultListener']/method[@name='onSuccess' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]">OnSuccess_TransactionResultListener_EventArgs</attr>
+	
+	<attr name="argsType" path="/api/package[@name='com.samsung.android.sdk.samsungpay.v2.payment']/interface[@name='MstPaymentListener']/method[@name='onFail' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle']]">onFail_MstPaymentListener_EventArgs</attr>
+	<attr name="argsType" path="/api/package[@name='com.samsung.android.sdk.samsungpay.v2.payment']/interface[@name='MstPaymentListener']/method[@name='onSuccess' and count(parameter)=1 and parameter[1][@type='com.samsung.android.sdk.samsungpay.v2.payment.SpayResponseInfo']]">OnSuccess_MstPaymentListener_EventArgs</attr>
+	
+	<attr name="argsType" path="/api/package[@name='com.samsung.android.sdk.samsungpay.v2.service']/interface[@name='UserSignUpNotifyListener']/method[@name='onFail' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle']]">onFail_UserSignUpNotifyListener_EventArgs</attr>
+	
+	<attr name="argsType" path="/api/package[@name='com.samsung.android.sdk.samsungpay.v2.payment']/interface[@name='PaymentManager.CustomSheetTransactionInfoListener']/method[@name='onFailure' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle']]">OnFailure_CustomSheetTransactionInfoListener_EventArgs</attr>
+	<attr name="argsType" path="/api/package[@name='com.samsung.android.sdk.samsungpay.v2.payment']/interface[@name='PaymentManager.CustomSheetTransactionInfoListener']/method[@name='onSuccess' and count(parameter)=3 and parameter[1][@type='com.samsung.android.sdk.samsungpay.v2.payment.CustomSheetPaymentInfo'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.os.Bundle']]">OnSuccess_CustomSheetTransactionInfoListener_EventArgs</attr>
+
+	<attr name="argsType" path="/api/package[@name='com.samsung.android.sdk.samsungpay.v2.payment']/interface[@name='PaymentManager.TransactionInfoListener']/method[@name='onFailure' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle']]">OnFailure_TransactionInfoListener_EventArgs</attr>
+	<attr name="argsType" path="/api/package[@name='com.samsung.android.sdk.samsungpay.v2.payment']/interface[@name='PaymentManager.TransactionInfoListener']/method[@name='onSuccess' and count(parameter)=3 and parameter[1][@type='com.samsung.android.sdk.samsungpay.v2.payment.PaymentInfo'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.os.Bundle']]">OnSuccess_TransactionInfoListener_EventArgs</attr>
+	<attr name="argsType" path="/api/package[@name='com.samsung.android.sdk.samsungpay.v2.payment']/interface[@name='PaymentManager.TransactionInfoListener']/method[@name='onCardInfoUpdated' and count(parameter)=1 and parameter[1][@type='com.samsung.android.sdk.samsungpay.v2.payment.CardInfo']]">OnCardInfoUpdated_TransactionInfoListener_EventArgs</attr>
+
 </metadata>

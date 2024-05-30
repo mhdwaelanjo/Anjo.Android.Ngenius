@@ -1,9 +1,35 @@
 ﻿<metadata>
-  <!--
+	<!--
   This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
   
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+
+	<remove-node path="/api/package[@name='payment.sdk.android.core']/class[@name='Order.Embedded']/field[@name='payment']" />
+	<remove-node path="/api/package[@name='payment.sdk.android.core']/class[@name='PaymentResponse.Embedded']/field[@name='payment']" />
+
+	<attr name="return" path="/api/package[@name='payment.sdk.android.core']/class[@name='Order.MatchedCandidates.Creator']/method[@name='createFromParcel' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]">Java.Lang.Object</attr>
+	<attr name="return" path="/api/package[@name='payment.sdk.android.core']/class[@name='Order.MatchedCandidates.Creator']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]">Java.Lang.Object[]</attr>
+
+	<attr name="return" path="/api/package[@name='payment.sdk.android.core']/class[@name='TermsAndCondition.Creator']/method[@name='createFromParcel' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]">Java.Lang.Object</attr>
+	<attr name="return" path="/api/package[@name='payment.sdk.android.core']/class[@name='TermsAndCondition.Creator']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]">Java.Lang.Object[]</attr>
+
+	<attr name="return" path="/api/package[@name='payment.sdk.android.cardpayment.savedCard']/class[@name='SavedCardActivityArgs.Creator']/method[@name='createFromParcel' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]">Java.Lang.Object</attr>
+	<attr name="return" path="/api/package[@name='payment.sdk.android.cardpayment.savedCard']/class[@name='SavedCardActivityArgs.Creator']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]">Java.Lang.Object[]</attr>
+
+	<attr name="return" path="/api/package[@name='payment.sdk.android.cardpayment.savedCard']/class[@name='SavedCardDto.Creator']/method[@name='createFromParcel' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]">Java.Lang.Object</attr>
+	<attr name="return" path="/api/package[@name='payment.sdk.android.cardpayment.savedCard']/class[@name='SavedCardDto.Creator']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]">Java.Lang.Object[]</attr>
+
+	<attr name="return" path="/api/package[@name='payment.sdk.android.cardpayment.visaInstalments.model']/class[@name='InstallmentPlan.Creator']/method[@name='createFromParcel' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]">Java.Lang.Object</attr>
+	<attr name="return" path="/api/package[@name='payment.sdk.android.cardpayment.visaInstalments.model']/class[@name='InstallmentPlan.Creator']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]">Java.Lang.Object[]</attr>
+
+	<attr name="return" path="/api/package[@name='payment.sdk.android.cardpayment.visaInstalments.model']/class[@name='NewCardDto.Creator']/method[@name='createFromParcel' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]">Java.Lang.Object</attr>
+	<attr name="return" path="/api/package[@name='payment.sdk.android.cardpayment.visaInstalments.model']/class[@name='NewCardDto.Creator']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]">Java.Lang.Object[]</attr>
+
+	<attr name="return" path="/api/package[@name='payment.sdk.android.cardpayment.visaInstalments.model']/class[@name='VisaInstalmentActivityArgs.Creator']/method[@name='createFromParcel' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]">Java.Lang.Object</attr>
+	<attr name="return" path="/api/package[@name='payment.sdk.android.cardpayment.visaInstalments.model']/class[@name='VisaInstalmentActivityArgs.Creator']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]">Java.Lang.Object[]</attr>
+
+
 </metadata>

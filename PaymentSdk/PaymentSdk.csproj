@@ -1,8 +1,69 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net8.0-android</TargetFramework>
-    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net8.0-android;net7.0-android</TargetFrameworks>
+		<SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+	<PropertyGroup>
+		<PackageId>Anjo.Android.Ngenius.PaymentSdk</PackageId>
+		<PackageVersion>3.1.7</PackageVersion>
+		<AssemblyVersion>3.1.7</AssemblyVersion>
+		<FileVersion>3.1.7</FileVersion>
+		<Version>3.1.7</Version>
+		<Title>Anjo Android Ngenius (network-international) Payment SDK</Title>
+		<Authors>Wael Anjo</Authors>
+		<Owners>Wael Anjo</Owners>
+		<PackageProjectUrl>https://github.com/mhdwaelanjo/Anjo.Android.Ngenius</PackageProjectUrl>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<Description>.NET for Android (formerly Xamarin.Android) Binding Library - Ngenius 'com.github.network-international.payment-sdk-android:payment-sdk'</Description>
+		<PackageReleaseNotes>Ngenius.Payment SDK v3.1.7</PackageReleaseNotes>
+		<Copyright>Copyright (c) 2024 Wael Anjo</Copyright>
+		<PackageTags>Xamarin.Android, NET MAUI, MonoDroid, Ngenius, network-international, credit cards, Payment Gateway, money, Samsung Pay</PackageTags>
+		<Summary>With Ngenius Payments, collect payments, make payouts, manage international payments and more.</Summary>
+		<!-- Include symbol files (*.pdb) in the built .nupkg -->
+		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageIcon>icon.png</PackageIcon>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="Jars\payment-sdk-release.aar" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="..\icon.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\LICENSE.txt">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="GoogleGson" Version="2.10.1.9" />
+		<PackageReference Include="Xamarin.AndroidX.Activity" Version="1.9.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Activity.Compose" Version="1.9.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.8" />
+		<PackageReference Include="Xamarin.AndroidX.Compose.Foundation" Version="1.6.6.1" />
+		<PackageReference Include="Xamarin.AndroidX.Compose.Foundation.Layout" Version="1.6.6.1" />
+		<PackageReference Include="Xamarin.AndroidX.Compose.Material" Version="1.6.6.1" />
+		<PackageReference Include="Xamarin.AndroidX.Compose.Runtime" Version="1.6.6.1" />
+		<PackageReference Include="Xamarin.AndroidX.Compose.UI" Version="1.6.6.1" />
+		<PackageReference Include="Xamarin.AndroidX.Compose.UI.Tooling" Version="1.6.6.1" />
+		<PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="2.1.4.11" />
+		<PackageReference Include="Xamarin.AndroidX.Core" Version="1.13.0.1" />
+		<PackageReference Include="Xamarin.Google.Android.Material" Version="1.10.0.4" />
+		<PackageReference Include="Xamarin.Kotlin.StdLib.Jdk7" Version="1.9.23.1" />
+		<PackageReference Include="Xamarin.KotlinX.Coroutines.Android" Version="1.8.0.2" />
+		<PackageReference Include="Xamarin.KotlinX.Coroutines.Core" Version="1.8.0.2" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\PaymentSdkCore\PaymentSdkCore.csproj" />
+	</ItemGroup>
 </Project>
